@@ -1,0 +1,2 @@
+!function(e,t){"object"==typeof exports&&"undefined"!=typeof module?t(exports,require("svelte/store")):"function"==typeof define&&define.amd?define(["exports","svelte/store"],t):t((e=e||self).svelte3Redux={},e.store)}(this,(function(e,t){e.bind=function(e){return{subscribe:t.readable(e.getState(),(function(t){return e.subscribe((function(){t(e.getState())}))})).subscribe,dispatch:e.dispatch}}}));
+//# sourceMappingURL=index.umd.js.map

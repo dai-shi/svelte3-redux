@@ -1,0 +1,55 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module"
+  },
+  "extends": [
+    "airbnb-base"
+  ],
+  "env": {
+    "browser": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".ts"]
+      }
+    }
+  },
+  "rules": {
+    "import/prefer-default-export": "off",
+    "import/no-unresolved": ["error", { "ignore": ["svelte3-redux"] }],
+    "prefer-object-spread": "off",
+    "arrow-parens": "off"
+  },
+  "overrides": [{
+    "files": ["**/*.ts"],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "rules": {
+      "@typescript-eslint/explicit-function-return-type": "off"
+    }
+  },{
+    "files": ["**/*.svelte"],
+    "plugins": [
+      "svelte3"
+    ],
+    "processor": "svelte3/svelte3",
+    "rules": {
+      "import/first": "off"
+    }
+  },{
+    "files": ["__tests__/**/*"],
+    "env": {
+      "jest": true
+    },
+    "rules": {
+      "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    }
+  }]
+}
