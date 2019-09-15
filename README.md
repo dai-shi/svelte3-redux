@@ -90,7 +90,7 @@ const reducer = (state = initialState, action) => {
 };
 
 const store = createStore(reducer);
-const getTrackedState = () => bindTracked(store);
+export default () => bindTracked(store);
 ```
 
 ### Counter.svelte
