@@ -8,7 +8,9 @@ Redux for Svelte 3
 
 ## Introduction
 
-TODO
+This is an experimental project to combine Redux and Svelte3.
+It provides the same state usage tracking support
+in [reactive-react-redux](https://github.com/dai-shi/reactive-react-redux).
 
 ## Install
 
@@ -16,7 +18,10 @@ TODO
 npm install svelte3-redux
 ```
 
-## Usage
+## Usage (bind)
+
+This is simple usage.
+Reactivity works for all components.
 
 ```html
 <script>
@@ -50,6 +55,72 @@ const state = bind(store);
   </div>
 </div>
  
+<h1>TextBox</h1>
+<div>
+  <div>
+    <span>Text: {$state.text}</span>
+    <input value={$state.text} on:input={event => state.dispatch({ type: 'setText', text: event.target.value })} />
+  </div>
+</div>
+```
+
+## Usage (bindTracked)
+
+This is recommended usage.
+Reactivity works based on state usage tracking.
+
+### store.js
+
+```javascript
+import { createStore } from 'redux';
+import { bindTracked } from 'svelte3-redux';
+
+const initialState = {
+  count: 0,
+  text: 'hello',
+};
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case 'increment': return { ...state, count: state.count + 1 };
+    case 'decrement': return { ...state, count: state.count - 1 };
+    case 'setText': return { ...state, text: action.text };
+    default: return state;
+  }
+};
+
+const store = createStore(reducer);
+const getTrackedState = () => bindTracked(store);
+```
+
+### Counter.svelte
+
+```html
+<script>
+  import getTrackedState from './store';
+
+  const state = getTrackedState();
+</script>
+
+<h1>Counter</h1>
+<div>
+  <div>
+    <span>Count: {$state.count}</span>
+    <button on:click={() => state.dispatch({ type: 'increment' })}>+1</button>
+    <button on:click={() => state.dispatch({ type: 'decrement' })}>-1</button>
+  </div>
+</div>
+```
+
+### TextBox.svelte
+
+```html
+<script>
+  import getTrackedState from './store';
+
+  const state = getTrackedState();
+</script>
+
 <h1>TextBox</h1>
 <div>
   <div>

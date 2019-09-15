@@ -8,6 +8,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "sourceMap": true,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
       "svelte3-redux": ["./src"]

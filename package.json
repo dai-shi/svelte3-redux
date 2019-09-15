@@ -1,7 +1,7 @@
 {
   "name": "svelte3-redux",
   "description": "Redux for Svelte 3",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "Daishi Kato",
   "repository": {
     "type": "git",
@@ -60,8 +60,5 @@
   "peerDependencies": {
     "svelte": ">=3.0.0",
     "redux": ">=4.0.0"
-  },
-  "jest": {
-    "preset": "ts-jest"
   }
 }
