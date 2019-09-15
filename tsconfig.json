@@ -4,7 +4,6 @@
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
-    "jsx": "react",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "sourceMap": true,
