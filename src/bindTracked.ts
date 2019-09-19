@@ -1,4 +1,4 @@
-import { Action, Store } from 'redux';
+import { Action as BaseAction, Store } from 'redux';
 import { readable } from 'svelte/store';
 
 import { createDeepProxy, isDeepChanged } from './deepProxy';
@@ -9,17 +9,18 @@ import { createDeepProxy, isDeepChanged } from './deepProxy';
  * @example
  * import { createStore } from 'redux';
  * import { bindTracked } from 'svelte3-redux';
+ *
  * const store = createStore(reducer);
  * export default () => bindTracked(store);
  */
-export const bindTracked = <S, A extends Action>(store: Store<S, A>) => {
+export const bindTracked = <State, Action extends BaseAction>(store: Store<State, Action>) => {
   const proxyCache = new WeakMap();
   let lastTracked: {
-    state: S;
+    state: State;
     affected: WeakMap<object, unknown>;
     cache: WeakMap<object, unknown>;
   };
-  const wrapState = (state: S) => {
+  const wrapState = (state: State) => {
     const affected = new WeakMap();
     const wrapped = createDeepProxy(state, affected, proxyCache);
     lastTracked = {

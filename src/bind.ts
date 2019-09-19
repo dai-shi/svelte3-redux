@@ -1,4 +1,4 @@
-import { Action, Store } from 'redux';
+import { Action as BaseAction, Store } from 'redux';
 import { readable } from 'svelte/store';
 
 /**
@@ -6,10 +6,11 @@ import { readable } from 'svelte/store';
  * @example
  * import { createStore } from 'redux';
  * import { bind } from 'svelte3-redux';
+ *
  * const store = createStore(reducer);
  * export default bind(store);
  */
-export const bind = <S, A extends Action>(store: Store<S, A>) => {
+export const bind = <State, Action extends BaseAction>(store: Store<State, Action>) => {
   const state = readable(store.getState(), (set) => {
     const unsubscribe = store.subscribe(() => {
       set(store.getState());
