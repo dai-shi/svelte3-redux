@@ -48,14 +48,16 @@
     "jest": "^24.9.0",
     "microbundle": "^0.12.0-next.6",
     "redux": "^4.0.4",
+    "redux-in-worker": "^0.7.0",
     "svelte": "^3.12.1",
     "svelte-loader": "^2.13.6",
-    "ts-loader": "^6.2.0",
     "ts-jest": "^24.1.0",
+    "ts-loader": "^6.2.0",
     "typescript": "^3.6.3",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.1"
+    "webpack-dev-server": "^3.8.1",
+    "worker-plugin": "^3.2.0"
   },
   "peerDependencies": {
     "svelte": ">=3.12.1",
