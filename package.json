@@ -36,11 +36,11 @@
   "dependencies": {},
   "devDependencies": {
     "@types/jest": "^24.0.18",
-    "@typescript-eslint/eslint-plugin": "^2.2.0",
-    "@typescript-eslint/parser": "^2.2.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.2",
+    "@typescript-eslint/parser": "^2.3.2",
     "add-text-to-markdown": "^2.0.0",
     "documentation": "^12.1.2",
-    "eslint": "^6.1.0",
+    "eslint": "^6.5.1",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-svelte3": "^2.7.3",
@@ -50,15 +50,15 @@
     "redux": "^4.0.4",
     "svelte": "^3.12.1",
     "svelte-loader": "^2.13.6",
-    "ts-loader": "^6.1.0",
+    "ts-loader": "^6.2.0",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.3",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
   },
   "peerDependencies": {
-    "svelte": ">=3.0.0",
-    "redux": ">=4.0.0"
+    "svelte": ">=3.12.1",
+    "redux": ">=4.0.4"
   }
 }
