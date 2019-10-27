@@ -1,7 +1,7 @@
 {
   "name": "svelte3-redux",
   "description": "Redux for Svelte 3",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "Daishi Kato",
   "repository": {
     "type": "git",
@@ -11,6 +11,7 @@
   "main": "./dist/index.js",
   "module": "./dist/index.esm.js",
   "browser": "./dist/index.umd.js",
+  "types": "./dist/src/index.d.ts",
   "files": [
     "src",
     "dist"
