@@ -140,7 +140,7 @@ Take Redux store and return a global state for Svelte.
 
 #### Parameters
 
-- `store` **Store&lt;State, Action>** 
+-   `store` **Store&lt;State, Action>** 
 
 #### Examples
 
@@ -159,7 +159,7 @@ With state usage tracking.
 
 #### Parameters
 
-- `store` **Store&lt;State, Action>** 
+-   `store` **Store&lt;State, Action>** 
 
 #### Examples
 
