@@ -17,6 +17,7 @@
     }
   },
   "rules": {
+    "import/extensions": ["error", "never"],
     "import/prefer-default-export": "off",
     "import/no-unresolved": ["error", { "ignore": ["svelte3-redux"] }],
     "prefer-object-spread": "off",
@@ -41,7 +42,8 @@
     ],
     "processor": "svelte3/svelte3",
     "rules": {
-      "import/first": "off"
+      "import/first": "off",
+      "no-multiple-empty-lines": "off"
     }
   },{
     "files": ["__tests__/**/*"],
