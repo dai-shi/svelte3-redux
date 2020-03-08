@@ -10,6 +10,6 @@ import { Action as BaseAction, Store } from 'redux';
  * export default () => bindTracked(store);
  */
 export declare const bindTracked: <State, Action extends BaseAction<any>>(store: Store<State, Action>) => {
-    subscribe: (run: (value: any) => void, invalidate?: ((value?: any) => void) | undefined) => () => void;
+    subscribe: (run: (value: State) => void, invalidate?: ((value?: State | undefined) => void) | undefined) => () => void;
     dispatch: import("redux").Dispatch<Action>;
 };
