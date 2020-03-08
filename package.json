@@ -1,7 +1,7 @@
 {
   "name": "svelte3-redux",
   "description": "Redux for Svelte 3",
-  "version": "0.2.4",
+  "version": "0.3.0",
   "author": "Daishi Kato",
   "repository": {
     "type": "git",
