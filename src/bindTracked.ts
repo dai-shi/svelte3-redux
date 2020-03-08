@@ -17,7 +17,7 @@ export const bindTracked = <State, Action extends BaseAction>(store: Store<State
   const proxyCache = new WeakMap();
   let lastTracked: {
     state: State;
-    affected: WeakMap<object, Set<string | number | symbol>>;
+    affected: WeakMap<object, unknown>;
     cache: WeakMap<object, unknown>;
   };
   const wrapState = (state: State) => {
