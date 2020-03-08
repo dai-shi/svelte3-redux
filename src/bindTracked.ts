@@ -1,7 +1,7 @@
 import { Action as BaseAction, Store } from 'redux';
 import { readable } from 'svelte/store';
 
-import { createDeepProxy, isDeepChanged } from './deepProxy';
+import { createDeepProxy, isDeepChanged } from 'proxy-compare';
 
 /**
  * Take Redux store and return a global state for Svelte.
@@ -17,7 +17,7 @@ export const bindTracked = <State, Action extends BaseAction>(store: Store<State
   const proxyCache = new WeakMap();
   let lastTracked: {
     state: State;
-    affected: WeakMap<object, unknown>;
+    affected: WeakMap<object, Set<string | number | symbol>>;
     cache: WeakMap<object, unknown>;
   };
   const wrapState = (state: State) => {
