@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+## [0.4.0] - 2020-07-02
+### Changed
+- Modern build
+
 ## [0.3.0] - 2020-03-08
 ### Changed
 - Use proxy-compare as a dependency
