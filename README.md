@@ -1,8 +1,8 @@
 # svelte3-redux
 
-[![Build Status](https://travis-ci.com/dai-shi/svelte3-redux.svg?branch=master)](https://travis-ci.com/dai-shi/svelte3-redux)
-[![npm version](https://badge.fury.io/js/svelte3-redux.svg)](https://badge.fury.io/js/svelte3-redux)
-[![bundle size](https://badgen.net/bundlephobia/minzip/svelte3-redux)](https://bundlephobia.com/result?p=svelte3-redux)
+[![CI](https://img.shields.io/github/workflow/status/dai-shi/svelte3-redux/CI)](https://github.com/dai-shi/svelte3-redux/actions?query=workflow%3ACI)
+[![npm](https://img.shields.io/npm/v/svelte3-redux)](https://www.npmjs.com/package/svelte3-redux)
+[![size](https://img.shields.io/bundlephobia/minzip/svelte3-redux)](https://bundlephobia.com/result?p=svelte3-redux)
 
 Redux for Svelte 3
 
