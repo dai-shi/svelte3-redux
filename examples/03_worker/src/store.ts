@@ -8,5 +8,4 @@ const store = wrapStore(
   initialState,
 );
 
-
 export default () => bindTracked(store);
